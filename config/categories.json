@@ -1,0 +1,20 @@
+{
+  "schema": "yumi.material-categories.v1",
+  "categories": {
+    "ai-news": {
+      "name": "AI新闻",
+      "datasetTitle": "每日yumi直播素材库",
+      "dataset": "dataset-00000000-0000-0000-0000-000000000001",
+      "minimumImages": 0,
+      "notes": "复用现有私库；原15段试讲和7原件不迁移、不改写。"
+    },
+    "entertainment": {
+      "name": "娱乐八卦",
+      "datasetTitle": "每日播报素材库·娱乐八卦",
+      "dataset": "dataset-00000000-0000-0000-0000-000000000002",
+      "minimumImages": 3,
+      "preferredImages": 6,
+      "notes": "多图要求为实际不同图片原件加出处，不以3个重复链接凑数；未经核实的传闻不当事实；公开播出仍需人工确认。"
+    }
+  }
+}

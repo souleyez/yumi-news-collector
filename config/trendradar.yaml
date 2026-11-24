@@ -1,0 +1,116 @@
+app:
+  timezone: Asia/Singapore
+  show_version_update: false
+platforms:
+  enabled: true
+  api_url: ''
+  sources:
+  - id: toutiao
+    name: 今日头条
+    expected_domain: toutiao.com
+  - id: baidu
+    name: 百度热搜
+    expected_domain: baidu.com
+  - id: wallstreetcn-hot
+    name: 华尔街见闻
+    expected_domain: wallstreetcn.com
+  - id: thepaper
+    name: 澎湃新闻
+    expected_domain: thepaper.cn
+  - id: bilibili-hot-search
+    name: bilibili 热搜
+    expected_domain: bilibili.com
+  - id: cls-hot
+    name: 财联社热门
+    expected_domain: cls.cn
+  - id: ifeng
+    name: 凤凰网
+    expected_domain: ifeng.com
+  - id: tieba
+    name: 贴吧
+    expected_domain: baidu.com
+  - id: weibo
+    name: 微博
+    expected_domain: weibo.com
+  - id: douyin
+    name: 抖音
+    expected_domain: douyin.com
+  - id: zhihu
+    name: 知乎
+    expected_domain: zhihu.com
+rss:
+  enabled: true
+  freshness_filter:
+    enabled: true
+    max_age_days: 1
+  feeds:
+  - id: hacker-news
+    name: Hacker News
+    url: https://hnrss.org/frontpage
+  - id: github-blog
+    name: GitHub Blog
+    url: https://github.blog/feed/
+  - id: huggingface
+    name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+filter:
+  method: keyword
+  priority_sort_enabled: true
+schedule:
+  enabled: false
+  preset: morning_evening
+report:
+  mode: current
+  display_mode: keyword
+  sort_by_position_first: false
+  rank_threshold: 5
+  max_news_per_keyword: 15
+display:
+  region_order:
+  - new_items
+  - hotlist
+  - rss
+  - standalone
+  - ai_analysis
+  regions:
+    hotlist: true
+    new_items: false
+    rss: true
+    standalone: false
+    ai_analysis: false
+  standalone:
+    platforms:
+    - zhihu
+    - wallstreetcn-hot
+    rss_feeds: []
+    max_items: 20
+ai_analysis:
+  enabled: false
+  language: Chinese
+  prompt_file: ai_analysis_prompt.txt
+  mode: follow_report
+  max_news_for_analysis: 150
+  include_rss: false
+  include_standalone: true
+  include_rank_timeline: true
+ai_translation:
+  enabled: false
+  language: 中文
+  prompt_file: ai_translation_prompt.txt
+  batch_size: 100
+  batch_interval: 2
+  scope:
+    hotlist: false
+    rss: true
+    standalone: true
+storage:
+  backend: local
+  formats:
+    sqlite: true
+    txt: false
+    html: true
+  local:
+    data_dir: output
+    retention_days: 0
+notification:
+  enabled: false

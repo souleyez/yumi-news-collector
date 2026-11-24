@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite3*
+*.lock.tmp
+output/
+state/
+credentials/
+*.pem
+*.key
+*.p12
+*.log
+trendradar-upstream/

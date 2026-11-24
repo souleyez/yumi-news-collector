@@ -1,0 +1,23 @@
+[GLOBAL_FILTER]
+震惊
+
+[WORD_GROUPS]
+[AI与模型]
+/\bAI\b|人工智能|大模型|智能体|Agent|DeepSeek|Qwen|千问|Gemini|Claude|GPT|LLM|OpenAI/i
+@15
+
+[数字人与内容制作]
+/数字人|虚拟人|语音合成|TTS|视频生成|文生视频|配音|口播|ComfyUI|MuseTalk|Hunyuan/i
+@15
+
+[数据与知识库]
+/数据库|知识库|向量|RAG|PostgreSQL|Data Hub|数据治理|Embedding/i
+@15
+
+[开源与开发工具]
+/开源|GitHub|编程|开发者|Docker|Linux|MCP|Coding|Developer|Open Source/i
+@15
+
+[商业与产业应用]
+/招聘|制造业|工业|自动化|企业服务|创业|SaaS|机器人/i
+@10
